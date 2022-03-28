@@ -1,0 +1,31 @@
+  <h1 mat-dialog-title>
+    <img class="icon_dialog" src='assets/cancelar.png' alt="">
+  </h1>
+  <div class="mat-dialog-content" mat-dialog-content>
+      Ha ocurrido un error, por favor verifica las credenciales e intenta nuevamente
+  </div>
+  <div mat-dialog-actions>
+    <button (click)="onNoClick()">Cerrar</button>
+  </div>
+
+<style>
+  .icon_dialog {
+    margin-left: 35%;
+  }
+  .mat-dialog-content {
+    font-size: 1.2em;
+    text-align: center;
+  }
+  button{
+    background-color: #f44336;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-left: 30%;
+    border: none;
+    height: 30px;
+    margin-top: 10%;
+    width: 40%;
+  }
+</style>
+

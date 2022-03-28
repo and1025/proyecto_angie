@@ -1,0 +1,230 @@
+html {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.principal_title {
+  width: 100%;
+  display: inline-flex;
+}
+.remington_title {
+  width: 70%;
+  height: 150px;
+  border: 1px solid #000;
+  display: inline-flex;
+}
+.remington_title img{
+  width: 40%;
+  height: 100px;
+  margin-top: 2%;
+}
+.remington_version {
+  width: 30%;
+  height: 150px;
+  border: 1px solid #000;
+  border-left: none;
+}
+.principal_title_desc{
+  width: 60%
+}
+.principal_title_desc h3, h4 {
+  text-align: center;
+}
+.remington_version_pendiente_master {
+  height: 100%;
+}
+.remington_version_pendiente {
+  height: 33%;
+  width: 100%;
+  display: inline-flex;
+}
+.remington_version_pendiente_final {
+  height: 34%;
+  width: 100%;
+  display: inline-flex;
+}
+input[type="text"]#subdomaintwo{
+  -webkit-appearance: none!important;
+  color: #000000;
+  padding-left: 5%;
+  text-align: left;
+  width: 30%;
+  border : none;
+  border-bottom: 1px solid #000;
+  background: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+input[type="text"]#subdomain{
+  width: 70%;
+  -webkit-appearance: none!important;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+.remington_version_pendiente_final input {
+  border-bottom: none !important;
+}
+.acta_reunion {
+  width: 100%;
+  border: 2px solid #000;
+  margin-top : 2%;
+}
+.acta_reunion_title {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #000;
+  display: inline-flex;
+  background: gray;
+}
+.acta_reunion_title h3{
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.caption {
+  width: 100%;
+  text-align: center;
+  height: 35px;
+  margin-top: 2%;
+  padding-top: 15px;
+  background: gray;
+  border: 1px solid #000000;
+  font-size: 25px;
+}
+.caption_none {
+  margin-top: 0;
+}
+
+.caption_cap {
+  background: #e1e1e1 !important;
+}
+
+.reunion {
+  background: #e1e1e1;
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+  height: 20px;
+}
+.formato {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-top: none;
+  text-align: center;
+  padding-top: 1%;
+  font-width: bold;
+}
+.grupo_section_princ {
+  width: 100%;
+  display: inline-flex;
+}
+.grupo_section_all_objetivo {
+  width: 100%;
+  display: inline-flex;
+  border: none;
+  height: 35px;
+}
+.grupo_section_tree {
+  width: 100%;
+  display: inline-flex;
+  border-top: 2px solid #000 !important;
+  height: 35px;
+}
+.grupo_section_tree input {
+  border: none  !important;
+  padding-left: 3% !important;
+  margin-left: 6% !important;
+  width: 100% !important;
+}
+.grupo_section_all_objetivo_b{
+  border-top: 2px solid #000;
+}
+.grupo_section_all_objetivo input {
+  border: none  !important;
+  padding-left: 3% !important;
+}
+.grupo_section {
+  width: 60%;
+  height: 35px;
+  border: 1px solid #000;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: inline-flex;
+}
+.grupo_section_all {
+  width: 100%;
+}
+.grupo_section_princ2 {
+  height: 30px;
+  display: inline-flex;
+}
+.grupo_section_firmas {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 0% !important;
+}
+.grupo_section_firmas input {
+  padding-left: 0% !important;
+  width: 100% !important;
+}
+.grupo_section_2 {
+  width: 40%;
+  height: auto;
+  border: 1px solid #000;
+  border-top: none;
+  border-right: none;
+  display: inline-flex;
+}
+.firmas {
+  margin-bottom: 5%;
+}
+.textArea2 {
+  width: 100%;
+  height: 100%;
+  border: none;
+  width: 99%;
+  height: 300px;
+}
+.button_crear{
+  margin-bottom: 5%;
+  align-content: center;
+  height: 35px;
+  font-size: 25px;
+  margin-left: 45%;
+  border-radius: 5px;
+}
+.section_upload {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.54);
+  display: inline-flex;
+  padding-top: 2%;
+  padding-left: 2%;
+  margin-bottom: 2%;
+}
+.text-center {
+  text-align: center;
+  display: inline-flex;
+  width: 100%;
+}
+.text-center button {
+  height: 20px;
+}
+.final_button {
+  margin-left: 5%;
+}
+.input_file {
+  display: grid;
+}

@@ -1,0 +1,407 @@
+<html>
+<a [routerLink]="['/acta-lista']">Regresar</a>
+<div>
+  <!-- seccion_principal -->
+  <div class="principal_title">
+    <div class="remington_title">
+      <img src="assets/logo-universdad.png" alt="">
+      <div class="principal_title_desc">
+        <h3>
+          UNIVERSIDAD REMINGTON
+        </h3>
+        <h3>
+          Sede Bogotá
+        </h3>
+        <h3>
+          SEMINARIO DE INVESTIGACIÓN
+        </h3>
+      </div>
+    </div>
+    <div class="remington_version">
+      <div class="remington_version_pendiente_master">
+        <div class="remington_version_pendiente">
+          <input type="text" id="subdomaintwo" value="VERSIÓN" disabled/>
+          <input type="text" id="subdomain" [(ngModel)]= "objetoActa.version" />
+        </div>
+        <div class="remington_version_pendiente">
+          <input type="text" id="subdomaintwo" value="CÓDIGO" disabled/>
+          <input type="text" id="subdomain" [(ngModel)]= "objetoActa.codigo" />
+        </div>
+        <div class="remington_version_pendiente_final">
+          <input type="text" id="subdomaintwo" value="PÁGINA" disabled/>
+          <input type="text" id="subdomain"  />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="formato">
+    <h1>FORMATO ACTA DE REUNIÓN</h1>
+  </div>
+  <!-- orden del día -->
+  <div class="acta_reunion">
+    <div class="acta_reunion_title">
+      <h3>
+        ACTA DE REUNIÓN
+      </h3>
+    </div>
+    <div class="grupo_section_princ">
+      <div class="grupo_section">
+        <input type="text" id="subdomaintwo" value="Grupo:" disabled/>
+        <input type="text" [(ngModel)]= "objetoActa.grupo" id="subdomain" />
+      </div>
+      <div class="grupo_section_2">
+        <input type="text" id="subdomaintwo" value="Acta N." disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.numeroActa" />
+      </div>
+    </div>
+
+    <div class="grupo_section_princ">
+      <div class="grupo_section">
+        <input type="text" id="subdomaintwo" value="Citado por:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.citadopor" />
+      </div>
+      <div class="grupo_section_2">
+        <input type="text" id="subdomaintwo" value="Fecha:" disabled/>
+        <input type="date" id="subdomain" [(ngModel)]= "objetoActa.fecha" />
+      </div>
+    </div>
+
+    <div class="grupo_section_princ">
+      <div class="grupo_section">
+        <input type="text" id="subdomaintwo" value="Coordinador:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.coordinador" />
+      </div>
+      <div class="grupo_section_2">
+        <input type="text" id="subdomaintwo" value="Inicio:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.inicio" />
+        <input type="text" id="subdomaintwo" value="Fin:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.fin" />
+      </div>
+    </div>
+
+    <div class="grupo_section_princ">
+      <div class="grupo_section">
+        <input type="text" id="subdomaintwo" value="Secretario:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.secretario" />
+      </div>
+      <div class="grupo_section_2">
+        <input type="text" id="subdomaintwo" value="Lugar:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.lugar" />
+      </div>
+    </div>
+
+    <div class="grupo_section_princ_objetivo">
+      <div class="grupo_section_all_objetivo">
+        <input type="text"  id="subdomaintwo" value="Objetivo de la reunión:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.objetivo" />
+      </div>
+    </div>
+
+    <div class="grupo_section_princ">
+      <div class="grupo_section_tree">
+        <input type="text" id="subdomaintwo" value="Reunión:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.reunion" />
+      </div>
+      <div class="grupo_section_tree">
+        <input type="text" id="subdomaintwo" value="Presencial:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.presencial" />
+      </div>
+      <div class="grupo_section_tree">
+        <input type="text" id="subdomaintwo" value="Virtual:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.virtual" />
+      </div>
+    </div>
+
+    <div class="grupo_section_princ_objetivo">
+      <div class="grupo_section_all_objetivo grupo_section_all_objetivo_b">
+        <input type="text"  id="subdomaintwo" value="Link Grabación:" disabled/>
+        <input type="text" id="subdomain" [(ngModel)]= "objetoActa.linkGrabacion" />
+      </div>
+    </div>
+
+  </div>
+  <!-- Sección orden del día -->
+  <div class="acta_reunion">
+    <div class="acta_reunion_title">
+      <h3>
+        ORDEN DEL DÍA
+      </h3>
+    </div>
+    <div style="height: auto" class="grupo_section_all_objetivo grupo_section_all_objetivo_b">
+      <input type="text"  id="subdomaintwo" value="Orden del día y temas a tratar:" disabled/>
+      <textarea rows="10" [(ngModel)]="objetoActa.ordenDia" style="width: '100%'; height: '100px';" wrap="soft">
+
+      </textarea>
+    </div>
+    <div style="height: auto" class="grupo_section_all_objetivo grupo_section_all_objetivo_b">
+      <input type="text"  id="subdomaintwo" value="Agenda:" disabled/>
+      <textarea rows="10" [(ngModel)]="objetoActa.agenda" style="width: '100%'; height: '100px';" wrap="soft">
+
+      </textarea>
+    </div>
+  </div>
+  <!-- Sección de participantes -->
+  <table>
+    <caption class="caption">PARTICIPANTES</caption>
+    <tr>
+      <th>No.</th>
+      <th>Nombre</th>
+      <th>Programa Académico</th>
+      <th>Teléfono</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td contenteditable='true'>{{tableAus[5]}}</td>
+      <td contenteditable='true'>{{tableAus[6]}}</td>
+      <td contenteditable='true'>{{tableAus[7]}}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td contenteditable='true'>{{tableAus[9]}}</td>
+      <td contenteditable='true'>{{tableAus[10]}}</td>
+      <td contenteditable='true'>{{tableAus[11]}}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td contenteditable='true'>{{tableAus[13]}}</td>
+      <td contenteditable='true'>{{tableAus[14]}}</td>
+      <td contenteditable='true'>{{tableAus[15]}}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td contenteditable='true'>{{tableAus[17]}}</td>
+      <td contenteditable='true'>{{tableAus[18]}}</td>
+      <td contenteditable='true'>{{tableAus[19]}}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td contenteditable='true'>{{tableAus[21]}}</td>
+      <td contenteditable='true'>{{tableAus[22]}}</td>
+      <td contenteditable='true'>{{tableAus[23]}}</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td contenteditable='true'>{{tableAus[25]}}</td>
+      <td contenteditable='true'>{{tableAus[26]}}</td>
+      <td contenteditable='true'>{{tableAus[27]}}</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td contenteditable='true'>{{tableAus[29]}}</td>
+      <td contenteditable='true'>{{tableAus[30]}}</td>
+      <td contenteditable='true'>{{tableAus[31]}}</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td contenteditable='true'>{{tableAus[33]}}</td>
+      <td contenteditable='true'>{{tableAus[34]}}</td>
+      <td contenteditable='true'>{{tableAus[35]}}</td>
+    </tr>
+  </table>
+  <!-- Sección de ausentes -->
+  <table>
+    <caption class="caption caption_none">AUSENTES</caption>
+    <tr>
+      <th>No.</th>
+      <th>Nombre</th>
+      <th>Programa Académico</th>
+      <th>Teléfono</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td contenteditable='true'>{{tableAus[5]}}</td>
+      <td contenteditable='true'>{{tableAus[6]}}</td>
+      <td contenteditable='true'>{{tableAus[7]}}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td contenteditable='true'>{{tableAus[9]}}</td>
+      <td contenteditable='true'>{{tableAus[10]}}</td>
+      <td contenteditable='true'>{{tableAus[11]}}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td contenteditable='true'>{{tableAus[13]}}</td>
+      <td contenteditable='true'>{{tableAus[14]}}</td>
+      <td contenteditable='true'>{{tableAus[15]}}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td contenteditable='true'>{{tableAus[17]}}</td>
+      <td contenteditable='true'>{{tableAus[18]}}</td>
+      <td contenteditable='true'>{{tableAus[19]}}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td contenteditable='true'>{{tableAus[21]}}</td>
+      <td contenteditable='true'>{{tableAus[22]}}</td>
+      <td contenteditable='true'>{{tableAus[23]}}</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td contenteditable='true'>{{tableAus[25]}}</td>
+      <td contenteditable='true'>{{tableAus[26]}}</td>
+      <td contenteditable='true'>{{tableAus[27]}}</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td contenteditable='true'>{{tableAus[29]}}</td>
+      <td contenteditable='true'>{{tableAus[30]}}</td>
+      <td contenteditable='true'>{{tableAus[31]}}</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td contenteditable='true'>{{tableAus[33]}}</td>
+      <td contenteditable='true'>{{tableAus[34]}}</td>
+      <td contenteditable='true'>{{tableAus[35]}}</td>
+    </tr>
+  </table>
+  <!-- Sección de desarrollo de la reunión -->
+  <div class="acta_reunion desarrollo">
+    <div class="acta_reunion_title reunion">
+      <h3>
+        DESARROLLO DE LA REUNIÓN
+      </h3>
+    </div>
+    <textArea [(ngModel)]="objetoActa.desarrolloReunion" class="textArea2">
+
+    </textArea>
+  </div>
+
+  <table id="conclusiones">
+    <caption class="caption caption_cap">CONCLUSIONES</caption>
+    <tr>
+      <th>No.</th>
+      <th>Tarea</th>
+      <th>Responsable</th>
+      <th>Período de cumplimiento</th>
+      <th>Observaciones</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td contenteditable='true'>{{tableConc[6]}}</td>
+      <td contenteditable='true'>{{tableConc[7]}}</td>
+      <td contenteditable='true'>{{tableConc[8]}}</td>
+      <td contenteditable='true'>{{tableConc[9]}}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td contenteditable='true'>{{tableConc[11]}}</td>
+      <td contenteditable='true'>{{tableConc[12]}}</td>
+      <td contenteditable='true'>{{tableConc[13]}}</td>
+      <td contenteditable='true'>{{tableConc[14]}}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td contenteditable='true'>{{tableConc[16]}}</td>
+      <td contenteditable='true'>{{tableConc[17]}}</td>
+      <td contenteditable='true'>{{tableConc[18]}}</td>
+      <td contenteditable='true'>{{tableConc[19]}}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td contenteditable='true'>{{tableConc[21]}}</td>
+      <td contenteditable='true'>{{tableConc[22]}}</td>
+      <td contenteditable='true'>{{tableConc[23]}}</td>
+      <td contenteditable='true'>{{tableConc[24]}}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td contenteditable='true'>{{tableConc[26]}}</td>
+      <td contenteditable='true'>{{tableConc[27]}}</td>
+      <td contenteditable='true'>{{tableConc[28]}}</td>
+      <td contenteditable='true'>{{tableConc[29]}}</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td contenteditable='true'>{{tableConc[31]}}</td>
+      <td contenteditable='true'>{{tableConc[32]}}</td>
+      <td contenteditable='true'>{{tableConc[33]}}</td>
+      <td contenteditable='true'>{{tableConc[34]}}</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td contenteditable='true'>{{tableConc[36]}}</td>
+      <td contenteditable='true'>{{tableConc[37]}}</td>
+      <td contenteditable='true'>{{tableConc[38]}}</td>
+      <td contenteditable='true'>{{tableConc[39]}}</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td contenteditable='true'>{{tableConc[41]}}</td>
+      <td contenteditable='true'>{{tableConc[42]}}</td>
+      <td contenteditable='true'>{{tableConc[43]}}</td>
+      <td contenteditable='true'>{{tableConc[44]}}</td>
+    </tr>
+  </table>
+  <!-- Sección de convocatorias próxima reunión -->
+  <table class="convocatoria">
+    <caption class="caption">CONVOCATORIA PRÓXIMA REUNIÓN</caption>
+    <tr>
+      <th width="30%">Fecha</th>
+      <th contenteditable='true'><input type="date" [(ngModel)]="convocatoria.fecha"></th>
+    </tr>
+    <tr>
+      <td width="30%">Hora</td>
+      <td contenteditable='true'><input type="text" [(ngModel)]="convocatoria.hora"></td>
+    </tr>
+    <tr>
+      <td width="30%">Lugar</td>
+      <td contenteditable='true'><input type="text" [(ngModel)]="convocatoria.lugar"></td>
+    </tr>
+    <tr>
+      <td width="30%">Transcriptor</td>
+      <td contenteditable='true'> <input type="text" [(ngModel)]="convocatoria.transcriptor"></td>
+    </tr>
+  </table>
+
+  <!--seccion de firmas-->
+    <div>
+      <div class="grupo_section_firmas">
+        <input type="text" id="subdomaintwo" value="Firma Responsable:" disabled/>
+        <input type="text" [(ngModel)]="objetoActa.firmaResponsable" id="subdomain" />
+      </div>
+    </div>
+</div>
+
+<div class="section_upload">
+  <div class="input_file">
+    <div class="text-center" *ngFor="let file of objetoActa.filesToUpload">
+      <input class="form-control" type="file"
+             (change)="onChange($event)">
+
+      <button (click)="onUpload()"
+              class="btn btn-success">
+        Upload
+      </button>
+
+      <button class="final_button">
+        +
+      </button>
+
+    </div>
+  </div>
+
+  <!--<div class="container text-center jumbotron"
+       *ngIf="shortLink">
+    <h2> Visit Here</h2>
+    <a href="{{shortLink}}">{{shortLink}}</a>
+  </div> -->
+
+  <!--Flag variable is used here-->
+  <div class="container" *ngIf="loading">
+    <h3>Loading ...</h3>
+  </div>
+</div>
+
+
+<button *ngIf="!validateButton" (click)="crearActa()" class="button_crear crear_acta" style="margin-left:40% !important;">
+  Crear acta
+</button>
+
+<button *ngIf="validateButton" (click)="imprimirActa()" class="button_crear crear_acta" style="margin-left:40% !important;">
+  Imprimir acta
+</button>
+
+</html>
+

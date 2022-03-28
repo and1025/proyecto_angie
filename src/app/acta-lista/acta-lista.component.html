@@ -1,0 +1,25 @@
+<div class="lista_acta">
+  <div class="title">
+    <h1 class="title_actas">Lista de actas</h1>
+  </div>
+  <div class="list-item">
+    <div *ngFor="let acta of actas" class="list-item-content">
+      <div class="list-item-content-title">
+        <h2>Acta nùmero {{acta.acta.numero}}</h2>
+      </div>
+      <div class="list-item-content-description">
+        <h2>Grupo del acta {{acta.acta.grupo}}</h2>
+      </div>
+      <div class="list-item-content-date">
+        <h2>{{acta.acta.fecha}}</h2>
+      </div>
+      <div class="list-item-content-button seeActa">
+        <button (click)="verActa(acta)" class="btn btn-primary">Ver acta</button>
+        <button (click)="verAdjuntos(acta.acta.filesToUpload)" class="btn btn-primary">Ver Adjuntos</button>
+      </div>
+    </div>
+  </div>
+  <div class="list-item-content-button button2">
+    <button (click)="crearActa()" class="btn btn-primary crear_acta">Crear acta</button>
+  </div>
+</div>
